@@ -6,7 +6,7 @@ def show_inventory(inventory):
     print()
 
 def add_fruit(inventory):
-    fruit = input("Enter the name of the new fruit: ").strip()
+    fruit = input("Enter the name of the new fruit: ").strip().lower()
     if fruit in inventory.keys():
         print(f"{fruit} already exists!\n")
     else:
@@ -16,7 +16,7 @@ def add_fruit(inventory):
         print(f"{fruit} added with stock {stock}.\n")
 
 def update_stock(inventory):
-    fruit = input("Enter the name of the fruit to update: ").strip()
+    fruit = input("Enter the name of the fruit to update: ").strip().lower()
     # ¿Es esta la forma correcta de iterar sobre el diccionario?
     if fruit in inventory.items():
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
