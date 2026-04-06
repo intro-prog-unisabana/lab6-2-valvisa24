@@ -18,7 +18,7 @@ def add_fruit(inventory):
 def update_stock(inventory):
     fruit = input("Enter the name of the fruit to update: ").strip().lower()
     # ¿Es esta la forma correcta de iterar sobre el diccionario?
-    if fruit in inventory.items():
+    if fruit in inventory:
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
         # ¿Es esta operación válida?
         inventory[fruit] += int(amount)
@@ -36,10 +36,10 @@ def menu():
 def run_program():
     # Puede haber un error de sintaxis aquí...
     inventory = {
-    "apples": 10,
-    "bananas": 20,
-    "oranges": 15
-}
+        "apples": 10,
+        "bananas": 20,
+        "oranges": 15
+    }
 
     # FREEZE CODE BEGIN
     print("Welcome to the Fruit Shop!\n")
@@ -59,7 +59,8 @@ def run_program():
             break
         else:
             print("Invalid option. Please choose 1, 2, 3, or 4.\n")
-  
+
+
 if __name__ == "__main__":
     run_program()
     # FREEZE CODE END
