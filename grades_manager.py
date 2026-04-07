@@ -1,6 +1,7 @@
 def initialize_dict(student_name, subject_grades):
     return {student_name: subject_grades}
 
+
 def add_student(student_grades=None):
     if student_grades is None:
         student_grades = {}
@@ -42,6 +43,7 @@ def get_students(student_grades, keys):
             print(f"{name.title()} not found!")
 
     return result
+
 
 def avg_by_student(student_grades, keys=None):
     if keys is None:
