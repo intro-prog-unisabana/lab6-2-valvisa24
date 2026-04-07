@@ -12,6 +12,9 @@ def student_averages(students):
 
 def assignment_averages(students):
     result = {}
+    if not students:
+        return {}
+
     for assignment in next(iter(students.values())).keys():
         total = 0
         count = 0
